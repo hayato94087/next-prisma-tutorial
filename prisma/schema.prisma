@@ -20,3 +20,23 @@ model User {
  name     String?
  password String
 }
+
+model Profile {
+ id     Int    @id @default(autoincrement())
+ bio    String
+ age    Int?
+}
+
+model Post {
+ id        Int     @id @default(autoincrement())
+ title     String
+ content   String
+ createdAt  DateTime   @default(now())
+ updatedAt  DateTime   @updatedAt
+ published Boolean @default(false)
+}
+
+model Category {
+ id    Int    @id @default(autoincrement())
+ name  String
+}
