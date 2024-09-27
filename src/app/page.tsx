@@ -1,6 +1,8 @@
 import { type FC } from "react";
 import { getUsersDTO } from "@/server/user-dto";
 
+export const revalidate = 10; // 10秒ごとに再検証
+
 const Home: FC = async () => {
   const users = await getUsersDTO();
 
