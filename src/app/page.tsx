@@ -1,8 +1,8 @@
 import { type FC } from "react";
-import { db } from "@/server/db";
+import { getUsersDTO } from "@/server/user-dto";
 
 const Home: FC = async () => {
-  const users = await db.user.findMany();
+  const users = await getUsersDTO();
 
   return (
     <main>
